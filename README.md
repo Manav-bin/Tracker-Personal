@@ -27,7 +27,7 @@ A full-stack web application for tracking your fitness journey with weight, body
    git clone <your-repo-url>
    cd fitness-progress-tracker
    ```
-1a. **Run this if needed from root folder**
+ **Run this if needed from root folder**
     ```docker run --rm -v "$PWD/frontend":/app -w /app node:18-slim sh -c "npm install && npm prune --production"```
 
 2. **Start the application:**
