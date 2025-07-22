@@ -1,0 +1,41 @@
+/* ---------- layout ---------- */
+.dashboard { padding: 2.5rem; display: flex; flex-direction: column; gap: 2rem; }
+.dashboard-header { text-align: center; }
+.dashboard-header h2 { font-size: 2rem; margin-bottom: .4rem; color:#333; }
+.dashboard-subtitle { color:#6c757d; font-size:1rem; }
+
+/* ---------- stat tiles ---------- */
+.stats-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:1.25rem; }
+.stat-card { display:flex; gap:1rem; align-items:center; padding:1.4rem; border-radius:12px; background:#fff;
+             box-shadow:0 4px 12px rgba(0,0,0,.08); transition:transform .2s ease; }
+.stat-card:hover { transform:translateY(-3px); }
+.stat-icon { font-size:2.5rem; }
+.stat-value { font-size:1.5rem; font-weight:700; color:#333; }
+.stat-label { font-size:.75rem; text-transform:uppercase; color:#6c757d; letter-spacing:.4px; }
+.stat-change { font-size:.75rem; font-weight:600; }
+.stat-change.positive { color:#28a745; }
+.stat-change.negative { color:#dc3545; }
+
+/* ---------- chart ---------- */
+.chart-card { background:#fff; padding:1.8rem; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,.08); min-height:22rem; }
+.chart-card canvas { max-height:18rem !important; }
+.empty-state { height:18rem; display:flex; flex-direction:column; justify-content:center; align-items:center; gap:.3rem; color:#777; }
+
+/* ---------- recent list ---------- */
+.recent-card { background:#fff; padding:1.8rem; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,.08); }
+.recent-card h3 { margin-bottom:1rem; color:#333; font-size:1.25rem; }
+.empty-note { color:#888; }
+.entries-list { display:flex; flex-direction:column; gap:.75rem; }
+.entry-item { display:flex; flex-wrap:wrap; justify-content:space-between; gap:.5rem; padding:.9rem 1rem; border:1px solid #e9ecef;
+              border-radius:8px; transition:background .2s ease,border .2s ease; }
+.entry-item:hover { background:#f8f9ff; border-color:#667eea; }
+.entry-date { font-weight:600; color:#667eea; }
+.entry-values { font-size:.9rem; color:#333; }
+.entry-notes { font-size:.85rem; color:#6c757d; }
+
+/* ---------- responsive ---------- */
+@media (max-width:768px){
+  .dashboard{padding:1.5rem;}
+  .entry-item{flex-direction:column; align-items:flex-start;}
+}
+
